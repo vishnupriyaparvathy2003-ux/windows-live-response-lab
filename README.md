@@ -21,7 +21,8 @@ To isolate the initial access vector and identify what malicious applications a 
 *   **Tool Implemented:** `LastActivityView`
 *   **Artifact Target:** Extracted system interaction data from the Windows Registry, Prefetch files, and Log sub-structures to build a centralized chronological stream.
 
-*(Screenshot Evidence placeholder: `1_execution_timeline.png`)*
+![LastActivityView Timeline Evidence](lastactivityview_timeline.png)
+
 
 #### 🔍 Technical Analysis of the Capture:
 *   **Evidence Target:** Tracking the execution behavior of unauthorized executables or system utilities (e.g., PowerShell commands or unexpected `.exe` launches).
@@ -35,10 +36,13 @@ This investigation evaluates a suspected insider threat or physical access breac
 *   **Tool Implemented:** USBDeview (NirSoft)
 *   **Artifact Target:** Windows `USBSTOR` registry keys tracking universal serial bus connection lineage data.
 
-![Rogue USB Device Footprinting](2usblineage.png)
+![USBDeview Device Detection](1usbdeview_footprint.png)
+
 
 
 #### 💾 Extracted Device Registry Signature Matrix
+![USBDeview Technical Details Matrix](2usbdeview_footprint.png)
+
 *   **Device Name:** Kingston DataTraveler 3.0 USB Device
 *   **Serial Number Vector:** `001D92AD8F73E1B15723120A` (Unique Device Identifier)
 *   **Registry Path:** `HKLM\SYSTEM\CurrentControlSet\Enum\USBSTOR\Disk&Ven_Kingston&Prod_DataTraveler_3.0`
